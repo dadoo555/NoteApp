@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dadoo555.github.io/NoteApp/static/css/main.3deaa050.css",
-    "main.js": "/dadoo555.github.io/NoteApp/static/js/main.960fc0c4.js",
+    "main.js": "/dadoo555.github.io/NoteApp/static/js/main.2dbdf758.js",
     "static/js/787.d5fa4d18.chunk.js": "/dadoo555.github.io/NoteApp/static/js/787.d5fa4d18.chunk.js",
     "index.html": "/dadoo555.github.io/NoteApp/index.html",
     "main.3deaa050.css.map": "/dadoo555.github.io/NoteApp/static/css/main.3deaa050.css.map",
-    "main.960fc0c4.js.map": "/dadoo555.github.io/NoteApp/static/js/main.960fc0c4.js.map",
+    "main.2dbdf758.js.map": "/dadoo555.github.io/NoteApp/static/js/main.2dbdf758.js.map",
     "787.d5fa4d18.chunk.js.map": "/dadoo555.github.io/NoteApp/static/js/787.d5fa4d18.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3deaa050.css",
-    "static/js/main.960fc0c4.js"
+    "static/js/main.2dbdf758.js"
   ]
 }
