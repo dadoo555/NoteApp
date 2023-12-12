@@ -7,10 +7,9 @@ function App() {
     
     return (
         <Routes>
-            <Route path='/' element={<Homepage/>}/>
-            <Route path='/NoteApp' element={<Homepage/>}/>
+            <Route exact path='/' element={<Homepage/>}/>
+            <Route exact path='/NoteApp' element={<Homepage/>}/>
         </Routes>
-        // <AnimatedRoutes/>
     );
 }
 
