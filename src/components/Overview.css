@@ -16,7 +16,7 @@ body{
     
 }
 
-#containerHome {
+#container-notes {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;

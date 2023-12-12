@@ -10,17 +10,17 @@ class Note {
 }
 
 
-function addNote(value){
+function setCookieNewNote(title, text){
     const cookies = new Cookies()
     const notes = cookies.get("notes") ? cookies.get("notes") : []
     const newdate = new Date()
-    const newnote = new Note("Titulo aleatorio", newdate.toLocaleDateString("de-DE"), value, "preto")
+    const newnote = new Note(title, newdate.toLocaleDateString("de-DE"), text, "preto")
     notes.push(newnote)
 
     cookies.set("notes", notes, {path: '/'})
 
 }
-function findAllNotes(){
+function getCookiesNotes(){
     const cookies = new Cookies();
     return cookies.get("notes")    
 }
@@ -30,4 +30,4 @@ function findAllNotes(){
 
 
 
-export {findAllNotes, addNote}
+export {setCookieNewNote, getCookiesNotes}

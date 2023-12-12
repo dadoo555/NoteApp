@@ -27,6 +27,8 @@
 
 .note-text p {
     margin: 0;
+    white-space: pre-line;
+
 }
 
 .note-title {

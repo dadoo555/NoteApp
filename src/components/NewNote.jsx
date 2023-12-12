@@ -1,15 +1,14 @@
 import './NewNote.css'
 import './Overview.css'
 import {motion} from 'framer-motion'
-import {addNote, findAllNotes} from "../functions/note"
 import { useState } from 'react'
 
 
 function NewNoteInput(props){
     return (
         <div id='container-newnote'>
-            <Menu add={props.add}/>
-            <textarea value={props.value} name="newnote" id="newnote" onChange={(e)=>{props.changeEvent(e.currentTarget.value)}}></textarea>
+            <Menu add={props.add} title={props.title} changeEvent={props.changeEventTitle}/>
+            <textarea value={props.text} name="newnote" id="newnote" onChange={(e)=>{props.changeEvent(e.currentTarget.value)}}></textarea>
         </div>
     )
 }
@@ -17,7 +16,7 @@ function NewNoteInput(props){
 function Menu(props){
     return(
         <div className='menu-newnote'>
-            <h3>New note</h3>
+            <input id='newnote-title' type='text' value={props.title} onChange={(e)=>{props.changeEvent(e.currentTarget.value)}}></input>
             <button onClick={props.add}>Add</button>
         </div>
     )
@@ -25,17 +24,19 @@ function Menu(props){
 
 export default function NewNote(props){
     const [valueNewNote, setValueNewNote] = useState("")
-    const [notes, setNotes] = useState([])
-
-    function add(){
-        
-        addNote(valueNewNote)
-        findAllNotes()
-        
-    }
+    const today = new Date()
+    const [titleNewNote, setTitleNewNote] = useState(`Title ${today.toLocaleDateString('de-DE')}`)
 
     function changeEventNewNote(value){
         setValueNewNote(value)
+    }
+
+    function changeEventTitle(value){
+        setTitleNewNote(value)
+    }
+
+    function addNote(){
+        props.add(titleNewNote, valueNewNote)
     }
 
     return (  
@@ -50,7 +51,12 @@ export default function NewNote(props){
                 width: props.isOpen ? "100%" : 0
             }}
         >
-                <NewNoteInput add={add} changeEvent={changeEventNewNote} value={valueNewNote}/>
+                <NewNoteInput 
+                    add={addNote} 
+                    changeEvent={changeEventNewNote} 
+                    text={valueNewNote} 
+                    changeEventTitle={changeEventTitle} 
+                    title={titleNewNote} />
         </motion.div>
     )
 }
