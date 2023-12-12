@@ -1,0 +1,27 @@
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: 40px;
+    background-color: rgb(201, 200, 178);
+    flex: none;
+}
+
+#menu button {
+    padding: 5px 8px;
+    background-color: rgb(168, 161, 109);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    height: 28px;
+}
+
+#menu button:hover {
+    background-color: rgb(181, 174, 124);
+}

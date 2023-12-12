@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container-newnote{
+    display: flex;
+    flex-direction: column;
+    
+    height: 80vh;
+
+
+    overflow: hidden;
+    background-color: rgb(25, 66, 28);
+
+}
+
+#newnote {
+    height: calc(100% - 82px);
+    width: calc(100% - 42px);
+    padding: 20px;
+    flex: none;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+
+.menu-newnote {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.menu-newnote h3 {
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex: none;
+    flex-wrap: nowrap;
+}
+
+.menu-newnote button {
+    padding: 5px 8px;
+    background-color: rgb(168, 161, 109);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    height: 28px;
+}
+
+.menu-newnote button:hover {
+    background-color: rgb(181, 174, 124);
+}
