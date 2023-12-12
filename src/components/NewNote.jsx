@@ -17,7 +17,7 @@ function Menu(props){
     return(
         <div className='menu-newnote'>
             <input id='newnote-title' type='text' value={props.title} onChange={(e)=>{props.changeEvent(e.currentTarget.value)}}></input>
-            <button onClick={props.add}>Add</button>
+            <button onClick={props.add}>Save</button>
         </div>
     )
 }

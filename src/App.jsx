@@ -8,7 +8,7 @@ function App() {
     return (
         <Routes>
             <Route exact path='/' element={<Homepage/>}/>
-            <Route exact path='/NoteApp' element={<Homepage/>}/>
+            
         </Routes>
     );
 }
